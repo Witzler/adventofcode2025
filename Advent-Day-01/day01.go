@@ -47,7 +47,6 @@ func main() {
 			log.Fatalf("Invalid degrees: %v", degreesS)
 		}
 
-		//currentDialPosition2 = currentDialPosition // reset for part two
 		turnDialPartTwo(direction, degrees) //Goes first cause doesn't change variable outside of function
 		turnDialPartOne(direction, degrees)
 
