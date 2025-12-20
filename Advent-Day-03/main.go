@@ -1,9 +1,9 @@
 package main
 
 // Answer Test part1: 357
-// Answer Test part2: 0
+// Answer Test part2: 3121910778619
 // Answer for part1: 17343
-// Answer for part2:
+// Answer for part2: 172664333119298
 
 import (
 	"adventofcode2025day03/utils" //d03 "adventofcode2025day03/utils"  => d03.LargestJoltage(line)
@@ -27,7 +27,7 @@ func main() {
 		bank := scanner.Text()
 		//fmt.Println(line)
 		totalJoltage = totalJoltage + utils.LargestJoltage(bank)
-		totalJoltage2 = totalJoltage2 + 0 // Placeholder for part 2
+		totalJoltage2 = totalJoltage2 + int(utils.FindInvalidIDS_partTwo(bank)) // Placeholder for part 2
 	}
 
 	if err := scanner.Err(); err != nil {
