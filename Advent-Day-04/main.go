@@ -22,7 +22,6 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin) // cat assets/input.txt | go run main.go
 	for scanner.Scan() {
 		gridRow := scanner.Text()
-		//fmt.Println(line)
 
 		gridSlice = append(gridSlice, make([]bool, len(gridRow)))
 		gridRowIndex := len(gridSlice) - 1
@@ -32,7 +31,6 @@ func main() {
 				gridSlice[gridRowIndex][i] = true
 			} //else if r == '.' {gridSlice[gridRowIndex][i] = false} // unnecessary else cause false is default
 		}
-		//fmt.Println(gridSlice)
 	}
 
 	accessableRolls += utils.ForkliftAccess(gridSlice)
@@ -42,9 +40,9 @@ func main() {
 		panic(err)
 	}
 
-	//t.Printf("Total largest joltage: %d\n", accessableRolls)
-	//t.Printf("Total for part 2: %d\n", accessableRollsPartTwo)
-	os.Stdout.WriteString("Total largest joltage: " + strconv.Itoa(accessableRolls) + "\n")   // alternative to fmt.Printf, less exec time
-	os.Stdout.WriteString("Total for part 2: " + strconv.Itoa(accessableRollsPartTwo) + "\n") // alternative to fmt.Printf, less exec time
+	//t.Printf("Total reachable rolls: %d\n", accessableRolls)
+	//t.Printf("Total reachable rolls part 2:  %d\n", accessableRollsPartTwo)
+	os.Stdout.WriteString("Total reachable rolls  " + strconv.Itoa(accessableRolls) + "\n")               // alternative to fmt.Printf, less exec time
+	os.Stdout.WriteString("Total reachable rolls part 2: " + strconv.Itoa(accessableRollsPartTwo) + "\n") // alternative to fmt.Printf, less exec time
 
 }
