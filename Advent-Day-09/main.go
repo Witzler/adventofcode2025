@@ -1,7 +1,7 @@
 package main
 
 // Solution part 1 test: 50
-// Solution part 1 input:
+// Solution part 1 input: 4750176210
 // Solution part 2 test:
 // Solution part 2 input:
 import (
